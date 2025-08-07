@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "CMake Build",
+        "type": "shell",
+        "command": "cmake -S . -B build && cmake --build build",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"]
+      },
+      {
+        "label": "Run App",
+        "type": "shell",
+        "command": "./build/MyCppApp",
+        "dependsOn": "CMake Build",
+        "group": "test"
+      }
+    ]
+  }
+  
