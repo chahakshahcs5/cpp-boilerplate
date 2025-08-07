@@ -6,6 +6,7 @@
   # Use https://search.nixos.org/packages to find packages
   packages = [
      pkgs.gcc
+     pkgs.fmt
       pkgs.clang
       pkgs.clang-tools
       pkgs.gdb
