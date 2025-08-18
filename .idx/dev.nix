@@ -21,7 +21,14 @@
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
-      # "vscodevim.vim"
+      "jeff-hykin.better-cpp-syntax"
+      "franneck94.vscode-c-cpp-config"
+      "llvm-vs-code-extensions.vscode-clangd"
+      "twxs.cmake"
+      "ms-vscode.cmake-tools"
+      "cheshirekow.cmake-format"
+      "vadimcn.vscode-lldb"
+      "ms-vscode.makefile-tools"
     ];
     # Enable previews
     previews = {
