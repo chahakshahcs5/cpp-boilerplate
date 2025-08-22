@@ -1,3 +1,19 @@
-Get started by customizing your environment (defined in the .idx/dev.nix file) with the tools and IDE extensions you'll need for your project!
+# Build Project
+`sh build.sh`
 
-Learn more at https://developers.google.com/idx/guides/customize-idx-env
+# Build Commands (Clean Start)
+
+rm -rf build
+rm CMakeUserPresets.json
+
+mkdir build
+cd build
+
+# Install Conan dependencies
+conan install .. --output-folder=. --build=missing --settings=build_type=Debug
+
+# Configure with CMake
+cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Debug
+
+# Build the project
+cmake --build .
